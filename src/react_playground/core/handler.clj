@@ -10,8 +10,15 @@
 		[:script {:src "https://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.min.js"}]
 		[:script {:src "/public/js/greeter.js"}]]))
 
+(defn wordcounter []
+  (hiccup/html [:body
+    [:div#editor.editor]
+    [:script {:src "https://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.min.js"}]
+    [:script {:src "/public/js/wordcount.js"}]]))
+
 (defroutes app-routes
   (GET "/" [] (front-page))
+  (GET "/wordcounter" [] (wordcounter))
   (route/resources "/public")
   (route/not-found "Not Found"))
 
