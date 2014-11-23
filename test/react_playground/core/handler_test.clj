@@ -1,7 +1,7 @@
-(ns react-playground-new.core.handler-test
+(ns react-playground.core.handler-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :as mock]
-            [react-playground-new.core.handler :refer :all]))
+            [react-playground.core.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"
